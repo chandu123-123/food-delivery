@@ -14,7 +14,7 @@ const Signup = () => {
   const submitt = (e) => {
     e.preventDefault();
 
-    const url = "http://localhost:5000/api/createuser"; // Replace with your API endpoint URL
+    const url = `${process.env.REACT_APP_API_ENDPOINT}/api/createuser`; // Replace with your API endpoint URL
     const data = {
       // Add your JSON data to send in the request body
       // Example: { "key1": "value1", "key2": "value2" }

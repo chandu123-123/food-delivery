@@ -15,7 +15,7 @@ const Login = () => {
   const submitt = async (e) => {
     e.preventDefault();
 
-    const url = "http://localhost:5000/api/loginuser";
+    const url = `${process.env.REACT_APP_API_ENDPOINT}/api/loginuser`;
     const data = {
       email: credentials.email,
       password: credentials.password,
