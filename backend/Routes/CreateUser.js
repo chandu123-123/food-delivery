@@ -22,7 +22,7 @@ router.post("/createuser", async (req, res) => {
       }
     }
     const authtoken=jwt.sign(data,secret)
-    res.json({ success: true, message: "User created successfully", user ,authtoken:authtoken});
+    res.json({ success: true, message: "User created successfully", user ,authtoken});
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, message: "Error creating user" });
